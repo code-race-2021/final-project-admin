@@ -1,17 +1,26 @@
 import { Box, Center, Button, ButtonGroup, Text, Stack, HStack, VStack } from '@chakra-ui/react'
-
-const options = ['producto', 'cliente', 'vendedor', 'servicio', 'delivery']
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+
+    const formOptions = ['producto', 'cliente', 'vendedor', 'servicio', 'delivery']
+    const [ selectedForm, setSelectedForm ] = useState()
+
+    
     return ( 
-        <Stack bg='tomato' direction='row' p={20} justify='center' >
+        <Stack bg='teal' direction='row' p={20} justify='center' >
             <VStack>
                 <HStack justify align p={20}>
-                    <Text fontSize={24} fontWeight={700} color='white'>¿Qué formulario querés crear?</Text>
+                    <Text fontSize={24} fontWeight={700} color='white'>Elegí un tipo de formulario</Text>
                 </HStack>
                 <HStack justify='center'>
                     <ButtonGroup>
-                        { options.map( option => { return <Button> { option } </Button> }) }
+                        { formOptions.map( option => { 
+                            return (    <Link to={`/create-form/${option}`}>
+                                    <Button onClick={ ( ) => setSelectedForm( option ) }> { option } </Button>
+                                </Link>)
+                             })}
                     </ButtonGroup>
                 </HStack>
             </VStack>
