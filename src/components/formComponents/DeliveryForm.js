@@ -1,0 +1,49 @@
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Radio,
+  RadioGroup,
+  HStack,
+  Center,
+  Button,
+  Text,
+  Box,
+} from "@chakra-ui/react";
+import { useState } from "react";
+
+import { Link, useParams } from "react-router-dom";
+import Form from "./Form";
+import InputField from "./InputField";
+import RadioButtons from "./RadioButtons";
+
+const DeliveryForm = () => {
+
+  const deliveryFormData = (
+    <>
+      {/* SKU INPUT */}
+      <InputField
+        type={"text"}
+        placeholder={"Ingrese letras y/o números."}
+        label={"Ingrese el SKU"}
+      />
+      {/* SERVICE TYPE RADIO BUTTONS */}
+      <RadioButtons
+        label={"Tipo de servicio"}
+        options={["Garantía", "Devolución"]}
+      />
+      {/* VALIDITY DAYS INPUT */}
+      <InputField
+        type={"number"}
+        placeholder={"Únicamente números."}
+        label={"Días de vigencia"}
+      />
+    </>
+  );
+
+  return <Form formData={deliveryFormData} />;
+};
+
+export default DeliveryForm;
