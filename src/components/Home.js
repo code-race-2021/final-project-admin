@@ -9,7 +9,7 @@ const Home = () => {
 
     
     return ( 
-        <Stack bg='teal' direction='row' p={20} justify='center' >
+        <Stack bg='teal' direction='row' p={20} justify='center' h='100vh'>
             <VStack>
                 <HStack justify align p={20}>
                     <Text fontSize={24} fontWeight={700} color='white'>Elegí un tipo de formulario</Text>

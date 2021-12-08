@@ -1,19 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Radio,
-  RadioGroup,
-  HStack,
-  Center,
-  Button,
-  Text,
-  Box,
-} from "@chakra-ui/react";
 import { useState } from "react";
-
 import { Link, useParams } from "react-router-dom";
 import Form from "./Form";
 import InputField from "./InputField";
@@ -23,23 +8,19 @@ const VendorForm = () => {
 
   const vendorFormData = (
     <>
-      {/* SKU INPUT */}
-      <InputField
-        type={"text"}
-        placeholder={"Ingrese letras y/o números."}
-        label={"Ingrese el SKU"}
-      />
-      {/* SERVICE TYPE RADIO BUTTONS */}
-      <RadioButtons
-        label={"Tipo de servicio"}
-        options={["Garantía", "Devolución"]}
-      />
-      {/* VALIDITY DAYS INPUT */}
+      {/* NAME INPUT */}
+      <InputField type={"text"} placeholder={"Pedro Pérez"} label={"Ingrese su nombre."} />
+      {/* CODE INPUT */}
       <InputField
         type={"number"}
-        placeholder={"Únicamente números."}
-        label={"Días de vigencia"}
+        placeholder={"Máximo 5 caracteres"}
+        label={"Código de venta"}
       />
+      {/* EMAIL INPUT */}
+      <RadioButtons
+        label={"Divisa"}
+        options={["ARS", "BRL", "USD"]}
+      />  
     </>
   );
 

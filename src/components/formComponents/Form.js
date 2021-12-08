@@ -1,28 +1,13 @@
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Radio,
-  RadioGroup,
-  HStack,
-  Center,
-  Button,
-  Text,
-  Box,
-} from "@chakra-ui/react";
+import { Center, Button, Box } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const Form = ({ formData }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log('event', event)
-
-      // TODO - send data somewhere
-  };
+    // TODO - send data somewhere
+  }
+  ;
 
   return (
     <Box w="100%" p="10%" m="auto">
@@ -34,10 +19,13 @@ const Form = ({ formData }) => {
         boxShadow="0px 0px 0px 2px rgba(0, 0, 0, 0.1)"
       >
         <form onSubmit={handleSubmit}>
-          {formData}
-          <Button colorScheme="teal" mt={4} type="submit">
-            Enviar
-          </Button>
+          <Center flexDirection="column" justifyContent="center" p={5}>
+            {formData}
+
+            <Button colorScheme="teal" type="submit" mt={5} w="100%">
+              Enviar
+            </Button>
+          </Center>
         </form>
       </Center>
       <Center mt={10}>

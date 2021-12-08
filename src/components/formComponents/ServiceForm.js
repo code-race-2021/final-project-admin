@@ -1,19 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Radio,
-  RadioGroup,
-  HStack,
-  Center,
-  Button,
-  Text,
-  Box,
-} from "@chakra-ui/react";
 import { useState } from "react";
-
 import { Link, useParams } from "react-router-dom";
 import Form from "./Form";
 import InputField from "./InputField";
@@ -26,7 +11,7 @@ const ServiceForm = () => {
       {/* SKU INPUT */}
       <InputField
         type={"text"}
-        placeholder={"Ingrese letras y/o números."}
+        placeholder={"Letras y/o números."}
         label={"Ingrese el SKU"}
       />
       {/* SERVICE TYPE RADIO BUTTONS */}

@@ -1,44 +1,24 @@
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Radio,
-  RadioGroup,
-  HStack,
-  Center,
-  Button,
-  Text,
-  Box,
-} from "@chakra-ui/react";
 import { useState } from "react";
-
 import { Link, useParams } from "react-router-dom";
 import Form from "./Form";
 import InputField from "./InputField";
-import RadioButtons from "./RadioButtons";
 
 const ClientForm = () => {
-
   const clientFormData = (
     <>
-      {/* SKU INPUT */}
-      <InputField
-        type={"text"}
-        placeholder={"Ingrese letras y/o números."}
-        label={"Ingrese el SKU"}
-      />
-      {/* SERVICE TYPE RADIO BUTTONS */}
-      <RadioButtons
-        label={"Tipo de servicio"}
-        options={["Garantía", "Devolución"]}
-      />
-      {/* VALIDITY DAYS INPUT */}
+      {/* NAME INPUT */}
+      <InputField type={"text"} placeholder={"Pedro Pérez"} label={"Ingrese su nombre."} />
+      {/* DNI INPUT */}
       <InputField
         type={"number"}
-        placeholder={"Únicamente números."}
-        label={"Días de vigencia"}
+        placeholder={"12345678"}
+        label={"Ingrese su DNI"}
+      />
+      {/* EMAIL INPUT */}
+      <InputField
+        type={"text"}
+        placeholder={"test@test.com"}
+        label={"Ingrese su email"}
       />
     </>
   );
