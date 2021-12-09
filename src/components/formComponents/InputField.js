@@ -1,8 +1,8 @@
-import { FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
-const InputField = ({ type, label, placeholder }) => {
-  const [value, setValue] = useState("");
+const InputField = ({ type, label, placeholder, defaultValue, validate, invalidMsg }) => {
+  const [value, setValue] = useState(defaultValue);
 
   return (
     <FormControl>
@@ -12,7 +12,12 @@ const InputField = ({ type, label, placeholder }) => {
         placeholder={placeholder}
         onChange={(event) => setValue(event.currentTarget.value)}
         value={value}
+        errorBorderColor='red.500'
+        isInvalid={validate(value)  ? true : false}
+        
       />
+      {validate(value) &&
+      <Text color='red'>{invalidMsg}</Text> }
     </FormControl>
   );
 };
