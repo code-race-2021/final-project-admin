@@ -13,7 +13,7 @@ const ServiceForm = () => {
       {/* SKU INPUT */}
       <InputField
         type={"text"}
-        placeholder={"Letras y/o números."}
+        placeholder={"H0L4CH3"}
         label={"Ingrese el SKU"}
         validate={isSKU}
         invalidMsg={"Únicamente letras y/o números!"}
@@ -26,11 +26,10 @@ const ServiceForm = () => {
       {/* VALIDITY DAYS INPUT */}
       <InputField
         type={"text"}
-        placeholder={"Únicamente números."}
+        placeholder={10}
         label={"Días de vigencia"}
         validate={isNumber}
         invalidMsg={"Únicamente números!"}
-        defaultValue={10}
       />
     </>
   );

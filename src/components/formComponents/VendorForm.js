@@ -17,11 +17,10 @@ const VendorForm = () => {
       {/* CODE INPUT */}
       <InputField
         type={"number"}
-        placeholder={"Máximo 5 caracteres"}
+        placeholder={12345}
         label={"Código de venta"}
         validate={isNumber}
         invalidMsg={"Únicamente números!"}
-        defaultValue={12345}
       />
       {/* EMAIL INPUT */}
       <RadioButtons label={"Divisa"} options={["ARS", "BRL", "USD"]} />

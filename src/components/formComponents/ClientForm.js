@@ -12,14 +12,14 @@ const ClientForm = () => {
         label={"Ingrese su nombre."}
         validate={isAlphabet}
         invalidMsg={"Debe haber algo mal"}
+        isRequired
       />
       {/* DNI INPUT */}
       <InputField
         type={"number"}
-        placeholder={"12345678"}
+        placeholder={12345678}
         label={"Ingrese su DNI"}
         validate={isDNI}
-        defaultValue={12345678}
         invalidMsg={"Ingrese los 8 números del DNI"}
       />
       {/* EMAIL INPUT */}
@@ -28,7 +28,6 @@ const ClientForm = () => {
         placeholder={"test@test.com"}
         label={"Ingrese su email"}
         validate={isEmail}
-        defaultValue={"test@test.com"}
         invalidMsg={"Formato de correo inválido."}
       />
     </>

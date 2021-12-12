@@ -10,14 +10,14 @@ const ProductForm = () => {
       <InputField
         type={"text"}
         label={"Nombre del Producto"}
-        placeholder={"Únicamente letras."}
+        placeholder={"Zapatillas"}
         validate={isAlphabet}
         invalidMsg={"Únicamente letras!"}
       />
       {/* SKU INPUT */}
       <InputField
         type={"text"}
-        placeholder={"Ingrese letras y/o números."}
+        placeholder={"SKERE12345"}
         label={"Ingrese el SKU"}
         validate={isSKU}
         invalidMsg={"Únicamente letras y/o números!"}
@@ -25,11 +25,10 @@ const ProductForm = () => {
       {/* PRICE INPUT */}
       <InputField
         type={"number"}
-        placeholder={"$1312"}
+        placeholder={1312}
         label={"Precio"}
         validate={isNumber}
         invalidMsg={"Únicamente números!"}
-        defaultValue={99999}
       />
     </>
   );

@@ -12,7 +12,7 @@ const DeliveryForm = () => {
       {/* PRODUCT CODE */}
       <InputField
         type={"text"}
-        placeholder={"Letras y/o números."}
+        placeholder={"ASD123ASD123"}
         label={"Ingrese el código del producto"}
         validate={isSKU}
         invalidMsg={"Únicamente letras y/o números!"}

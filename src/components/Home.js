@@ -8,13 +8,8 @@ import {
 } from "@chakra-ui/react";
 
 const Home = () => {
-  const formOptions = [
-    "producto",
-    "cliente",
-    "vendedor",
-    "servicio",
-    "delivery",
-  ];
+    
+  const formOptions = [ "producto", "cliente", "vendedor", "servicio", "delivery" ];
 
   return (
     <Stack bg="teal" direction="row" p={20} justify="center" h="100vh">

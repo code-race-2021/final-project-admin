@@ -5,17 +5,17 @@ const InputField = ({
   type,
   label,
   placeholder,
-  defaultValue,
   validate,
   invalidMsg,
 }) => {
   
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(placeholder);
 
   return (
     <FormControl>
       <FormLabel>{label}</FormLabel>
       <Input
+        
         type={type}
         placeholder={placeholder}
         onChange={(event) => setValue(event.currentTarget.value)}
