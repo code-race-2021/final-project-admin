@@ -5,7 +5,6 @@ import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
 
 const DeliveryForm = () => {
-  const [isValid, setIsValid] = useState(true);
 
   const deliveryFormData = (
     <>
