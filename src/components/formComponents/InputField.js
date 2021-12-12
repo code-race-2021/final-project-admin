@@ -12,7 +12,7 @@ const InputField = ({
   const [value, setValue] = useState(placeholder);
 
   return (
-    <FormControl>
+    <FormControl isRequired>
       <FormLabel>{label}</FormLabel>
       <Input
         
