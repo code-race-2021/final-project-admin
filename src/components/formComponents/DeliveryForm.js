@@ -19,7 +19,6 @@ const DeliveryForm = () => {
       />
       {/* PRODUCT TYPE */}
       <RadioButtons
-        isRequired
         label={"Tipo de Delivery"}
         options={["Regular", "Express"]}
       />
