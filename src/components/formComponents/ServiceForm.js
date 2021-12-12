@@ -2,7 +2,7 @@ import { FormControl } from "@chakra-ui/react";
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
-import { hasSpecialCharacters, isNumber, serviceRadioButtonOptions } from "../../Utils";
+import { hasSpecialCharacters, isNotNumber, serviceRadioButtonOptions } from "../../Utils";
 
 const ServiceForm = () => {
 
@@ -26,7 +26,7 @@ const ServiceForm = () => {
         type={"text"}
         placeholder={10}
         label={"Días de vigencia"}
-        validate={isNumber}
+        validate={isNotNumber}
         invalidMsg={"Únicamente números!"}
       />
     </FormControl>

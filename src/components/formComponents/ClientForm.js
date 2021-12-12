@@ -1,6 +1,6 @@
 import Form from "./Form";
 import InputField from "./InputField";
-import { isAlphabet, isEmail , isDNI } from "../../Utils";
+import { isNotAlphabet, isNotEmail , isNotDNI } from "../../Utils";
 import { FormControl } from "@chakra-ui/react";
 
 const ClientForm = () => {
@@ -11,16 +11,16 @@ const ClientForm = () => {
         type={"text"}
         placeholder={"Pedro"}
         label={"Ingrese su nombre."}
-        validate={isAlphabet}
+        validate={isNotAlphabet}
         invalidMsg={"Debe haber algo mal"}
         isRequired
       />
       {/* DNI INPUT */}
       <InputField
-        type={"number"}
+        type={"text"}
         placeholder={12345678}
         label={"Ingrese su DNI"}
-        validate={isDNI}
+        validate={isNotDNI}
         invalidMsg={"Ingrese los 8 números del DNI"}
       />
       {/* EMAIL INPUT */}
@@ -28,7 +28,7 @@ const ClientForm = () => {
         type={"email"}
         placeholder={"test@test.com"}
         label={"Ingrese su email"}
-        validate={isEmail}
+        validate={isNotEmail}
         invalidMsg={"Formato de correo inválido."}
       />
     </FormControl>

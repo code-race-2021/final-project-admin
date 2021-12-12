@@ -1,7 +1,7 @@
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
-import { isAlphabet, isNumber, currencyRadioButtonOptions } from "../../Utils";
+import { isNotAlphabet, isNotDNI, currencyRadioButtonOptions } from "../../Utils";
 import { FormControl } from "@chakra-ui/react";
 
 const VendorForm = () => {
@@ -12,15 +12,15 @@ const VendorForm = () => {
         type={"text"}
         placeholder={"Pedro"}
         label={"Ingrese su nombre."}
-        validate={isAlphabet}
+        validate={isNotAlphabet}
         invalidMsg={"Nombre inválido."}
       />
       {/* CODE INPUT */}
       <InputField
-        type={"number"}
+        type={"text"}
         placeholder={12345}
         label={"Código de venta"}
-        validate={isNumber}
+        validate={isNotDNI}
         invalidMsg={"Únicamente números!"}
       />
       {/* EMAIL INPUT */}
