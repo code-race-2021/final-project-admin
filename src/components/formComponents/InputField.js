@@ -21,7 +21,7 @@ const InputField = ({
         onChange={(event) => setValue(event.currentTarget.value)}
         value={value}
         errorBorderColor="red.500"
-        isInvalid={validate(value) ? true : false}
+        isInvalid={validate(value)}
       />
       {validate(value) && <Text color="red">{invalidMsg}</Text>}
     </FormControl>
