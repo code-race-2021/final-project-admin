@@ -1,14 +1,10 @@
-import { Center, Button, Box } from "@chakra-ui/react";
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Center, Button, Box, Link } from "@chakra-ui/react";
 
 const Form = ({ formData }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // TODO - send data somewhere
-  }
-  ;
-
+  };
   return (
     <Box w="100%" p="10%" m="auto">
       <Center
@@ -29,11 +25,13 @@ const Form = ({ formData }) => {
         </form>
       </Center>
       <Center mt={10}>
-        <Link to="/">
-          <Button colorScheme="teal" variant="ghost">
-            Volver
-          </Button>
-        </Link>
+        <Button
+          as={Link}
+          href="/"
+          children={"Volver"}
+          colorScheme="teal"
+          variant="ghost"
+        />
       </Center>
     </Box>
   );
