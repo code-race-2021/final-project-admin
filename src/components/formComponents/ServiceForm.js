@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
-import { isSKU, isNumber } from "../../Utils";
+import { hasSpecialCharacters, isNumber } from "../../Utils";
 
 const ServiceForm = () => {
 
@@ -15,7 +15,7 @@ const ServiceForm = () => {
         type={"text"}
         placeholder={"H0L4CH3"}
         label={"Ingrese el SKU"}
-        validate={isSKU}
+        validate={hasSpecialCharacters}
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* SERVICE TYPE RADIO BUTTONS */}

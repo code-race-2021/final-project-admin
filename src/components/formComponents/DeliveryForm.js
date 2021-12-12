@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  { isSKU } from "../../Utils";
+import  { hasSpecialCharacters } from "../../Utils";
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
@@ -14,7 +14,7 @@ const DeliveryForm = () => {
         type={"text"}
         placeholder={"ASD123ASD123"}
         label={"Ingrese el código del producto"}
-        validate={isSKU}
+        validate={hasSpecialCharacters}
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* PRODUCT TYPE */}

@@ -1,4 +1,4 @@
-export function isSKU(value) {
+export function hasSpecialCharacters(value) {
   //Regex for Valid Characters i.e. Alphabets, Numbers and Space.
   let regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
   let isInvalid = regex.test(value);

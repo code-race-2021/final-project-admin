@@ -1,4 +1,4 @@
-import  { isAlphabet, isSKU, isNumber } from "../../Utils";
+import  { isAlphabet, hasSpecialCharacters, isNumber } from "../../Utils";
 import Form from "./Form";
 import InputField from "./InputField";
 
@@ -19,7 +19,7 @@ const ProductForm = () => {
         type={"text"}
         placeholder={"SKERE12345"}
         label={"Ingrese el SKU"}
-        validate={isSKU}
+        validate={hasSpecialCharacters}
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* PRICE INPUT */}
