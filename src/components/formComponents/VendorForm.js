@@ -2,10 +2,11 @@ import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
 import { isAlphabet, isNumber } from "../../Utils";
+import { FormControl } from "@chakra-ui/react";
 
 const VendorForm = () => {
   const vendorFormData = (
-    <>
+    <FormControl isRequired>
       {/* NAME INPUT */}
       <InputField
         type={"text"}
@@ -24,7 +25,7 @@ const VendorForm = () => {
       />
       {/* EMAIL INPUT */}
       <RadioButtons label={"Divisa"} options={["ARS", "BRL", "USD"]} />
-    </>
+    </FormControl>
   );
 
   return <Form formData={vendorFormData} />;

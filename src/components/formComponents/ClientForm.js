@@ -1,10 +1,11 @@
 import Form from "./Form";
 import InputField from "./InputField";
 import { isAlphabet, isEmail , isDNI } from "../../Utils";
+import { FormControl } from "@chakra-ui/react";
 
 const ClientForm = () => {
   const clientFormData = (
-    <>
+    <FormControl isRequired>
       {/* NAME INPUT */}
       <InputField
         type={"text"}
@@ -30,7 +31,7 @@ const ClientForm = () => {
         validate={isEmail}
         invalidMsg={"Formato de correo inválido."}
       />
-    </>
+    </FormControl>
   );
 
   return <Form formData={clientFormData} />;

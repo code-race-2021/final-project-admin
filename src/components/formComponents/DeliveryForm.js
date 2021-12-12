@@ -1,3 +1,4 @@
+import { FormControl } from "@chakra-ui/react";
 import { useState } from "react";
 import  { hasSpecialCharacters } from "../../Utils";
 import Form from "./Form";
@@ -7,7 +8,7 @@ import RadioButtons from "./RadioButtons";
 const DeliveryForm = () => {
 
   const deliveryFormData = (
-    <>
+    <FormControl isRequired>
       {/* PRODUCT CODE */}
       <InputField
         type={"text"}
@@ -18,10 +19,11 @@ const DeliveryForm = () => {
       />
       {/* PRODUCT TYPE */}
       <RadioButtons
+        isRequired
         label={"Tipo de Delivery"}
         options={["Regular", "Express"]}
       />
-    </>
+    </FormControl>
   );
 
   return <Form formData={deliveryFormData} />;

@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { FormControl } from "@chakra-ui/react";
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
@@ -7,9 +6,8 @@ import { hasSpecialCharacters, isNumber } from "../../Utils";
 
 const ServiceForm = () => {
 
-
   const serviceFormData = (
-    <>
+    <FormControl isRequired>
       {/* SKU INPUT */}
       <InputField
         type={"text"}
@@ -31,7 +29,7 @@ const ServiceForm = () => {
         validate={isNumber}
         invalidMsg={"Únicamente números!"}
       />
-    </>
+    </FormControl>
   );
 
   return <Form formData={serviceFormData} />;
