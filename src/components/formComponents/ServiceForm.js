@@ -1,15 +1,16 @@
 import { FormControl } from "@chakra-ui/react";
 import Form from "./Form";
-import InputField from "./InputField";
-import RadioButtons from "./RadioButtons";
+import FormInputField from "./FormInputField";
+import FormRadioButtons from "./FormRadioButtons";
 import { hasSpecialCharacters, isNotNumber, serviceRadioButtonOptions } from "../../Utils";
 
 const ServiceForm = () => {
 
   const serviceFormData = (
-    <FormControl isRequired>
+    <>
       {/* SKU INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={"H0L4CH3"}
         label={"Ingrese el SKU"}
@@ -17,19 +18,21 @@ const ServiceForm = () => {
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* SERVICE TYPE RADIO BUTTONS */}
-      <RadioButtons
+      <FormRadioButtons
+        required={true}
         label={"Tipo de servicio"}
         options={serviceRadioButtonOptions}
       />
       {/* VALIDITY DAYS INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={10}
         label={"Días de vigencia"}
         validate={isNotNumber}
         invalidMsg={"Únicamente números!"}
       />
-    </FormControl>
+    </>
   );
 
   return <Form formData={serviceFormData} />;

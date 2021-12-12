@@ -1,13 +1,13 @@
 import Form from "./Form";
-import InputField from "./InputField";
+import FormInputField from "./FormInputField";
 import { isNotAlphabet, isNotEmail , isNotDNI } from "../../Utils";
-import { FormControl } from "@chakra-ui/react";
 
 const ClientForm = () => {
   const clientFormData = (
-    <FormControl isRequired>
+    <>
       {/* NAME INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={"Pedro"}
         label={"Ingrese su nombre."}
@@ -16,22 +16,24 @@ const ClientForm = () => {
         isRequired
       />
       {/* DNI INPUT */}
-      <InputField
-        type={"text"}
+      <FormInputField
+        required={true}
+        type={"number"}
         placeholder={12345678}
         label={"Ingrese su DNI"}
         validate={isNotDNI}
         invalidMsg={"Ingrese los 8 números del DNI"}
       />
       {/* EMAIL INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"email"}
         placeholder={"test@test.com"}
         label={"Ingrese su email"}
         validate={isNotEmail}
         invalidMsg={"Formato de correo inválido."}
       />
-    </FormControl>
+    </>
   );
 
   return <Form formData={clientFormData} />;

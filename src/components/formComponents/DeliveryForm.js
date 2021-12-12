@@ -1,15 +1,16 @@
 import { FormControl } from "@chakra-ui/react";
 import  { hasSpecialCharacters, deliveryRadioButtonOptions } from "../../Utils";
 import Form from "./Form";
-import InputField from "./InputField";
-import RadioButtons from "./RadioButtons";
+import FormInputField from "./FormInputField";
+import FormRadioButtons from "./FormRadioButtons";
 
 const DeliveryForm = () => {
 
   const deliveryFormData = (
-    <FormControl isRequired>
+    <>
       {/* PRODUCT CODE */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={"ASD123ASD123"}
         label={"Ingrese el código del producto"}
@@ -17,11 +18,12 @@ const DeliveryForm = () => {
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* PRODUCT TYPE */}
-      <RadioButtons
+      <FormRadioButtons
+        required={true}
         label={"Tipo de Delivery"}
         options={deliveryRadioButtonOptions}
       />
-    </FormControl>
+    </>
   );
 
   return <Form formData={deliveryFormData} />;

@@ -1,14 +1,14 @@
 import  { isNotAlphabet, hasSpecialCharacters, isNotNumber } from "../../Utils";
 import Form from "./Form";
-import InputField from "./InputField";
-import { FormControl } from "@chakra-ui/react";
+import FormInputField from "./FormInputField";
 
 const ProductForm = () => {
 
   const productFormData = (
-    <FormControl isRequired>
+    <>
       {/* PRODUCT NAME INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         label={"Nombre del Producto"}
         placeholder={"Zapatillas"}
@@ -16,7 +16,8 @@ const ProductForm = () => {
         invalidMsg={"Únicamente letras!"}
       />
       {/* SKU INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={"SKERE12345"}
         label={"Ingrese el SKU"}
@@ -24,14 +25,15 @@ const ProductForm = () => {
         invalidMsg={"Únicamente letras y/o números!"}
       />
       {/* PRICE INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={1312}
         label={"Precio"}
         validate={isNotNumber}
         invalidMsg={"Únicamente números!"}
       />
-    </FormControl>
+    </>
   );
 
   return <Form formData={productFormData} />;

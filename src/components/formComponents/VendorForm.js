@@ -1,14 +1,15 @@
 import Form from "./Form";
-import InputField from "./InputField";
-import RadioButtons from "./RadioButtons";
+import FormInputField from "./FormInputField";
+import FormRadioButtons from "./FormRadioButtons";
 import { isNotAlphabet, isNotDNI, currencyRadioButtonOptions } from "../../Utils";
 import { FormControl } from "@chakra-ui/react";
 
 const VendorForm = () => {
   const vendorFormData = (
-    <FormControl isRequired>
+    <>
       {/* NAME INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={"Pedro"}
         label={"Ingrese su nombre."}
@@ -16,7 +17,8 @@ const VendorForm = () => {
         invalidMsg={"Nombre inválido."}
       />
       {/* CODE INPUT */}
-      <InputField
+      <FormInputField
+        required={true}
         type={"text"}
         placeholder={12345}
         label={"Código de venta"}
@@ -24,8 +26,8 @@ const VendorForm = () => {
         invalidMsg={"Únicamente números!"}
       />
       {/* EMAIL INPUT */}
-      <RadioButtons label={"Divisa"} options={currencyRadioButtonOptions} />
-    </FormControl>
+      <FormRadioButtons label={"Divisa"} options={currencyRadioButtonOptions} required={true}/>
+    </>
   );
 
   return <Form formData={vendorFormData} />;

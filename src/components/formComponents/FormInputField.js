@@ -1,7 +1,7 @@
-import { FormLabel, Input, Text } from "@chakra-ui/react";
+import { FormLabel, FormControl, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
-const InputField = ({ type, label, placeholder, validate, invalidMsg }) => {
+const FormInputField = ({ required, type, label, placeholder, validate, invalidMsg }) => {
   const [value, setValue] = useState("");
   const [isInvalid, setIsInvalid] = useState(false)
 
@@ -13,7 +13,7 @@ const InputField = ({ type, label, placeholder, validate, invalidMsg }) => {
   }
 
   return (
-    <>
+    <FormControl isRequired={required}>
       <FormLabel>{label}</FormLabel>
       <Input
         type={type}
@@ -24,8 +24,8 @@ const InputField = ({ type, label, placeholder, validate, invalidMsg }) => {
         isInvalid={isInvalid}
       />
       {isInvalid && <Text color="red">{invalidMsg}</Text>}
-    </>
+    </FormControl>
   );
 };
 
-export default InputField;
+export default FormInputField;
