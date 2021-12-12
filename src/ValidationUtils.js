@@ -1,18 +1,3 @@
-//Constantes globales
-
-export const formOptions = [
-  "producto",
-  "cliente",
-  "vendedor",
-  "servicio",
-  "delivery",
-];
-export const serviceRadioButtonOptions = ["Garantía", "Devolución"];
-export const deliveryRadioButtonOptions = ["Regular", "Express"];
-export const currencyRadioButtonOptions = ["ARS", "BRL", "USD"];
-
-//Funciones útiles
-
 export function hasSpecialCharacters(value) {
   //Regex for Valid Characters i.e. Alphabets, Numbers and Space.
   let regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;

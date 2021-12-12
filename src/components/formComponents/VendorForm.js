@@ -1,8 +1,8 @@
 import Form from "./Form";
 import FormInputField from "./FormInputField";
 import FormRadioButtons from "./FormRadioButtons";
-import { isNotAlphabet, isNotDNI, currencyRadioButtonOptions } from "../../Utils";
-import { FormControl } from "@chakra-ui/react";
+import { isNotAlphabet, isNotDNI } from "../../ValidationUtils";
+import { currencyRadioButtonOptions } from "../../Constants"
 
 const VendorForm = () => {
   const vendorFormData = (

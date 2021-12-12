@@ -2,7 +2,8 @@ import { FormControl } from "@chakra-ui/react";
 import Form from "./Form";
 import FormInputField from "./FormInputField";
 import FormRadioButtons from "./FormRadioButtons";
-import { hasSpecialCharacters, isNotNumber, serviceRadioButtonOptions } from "../../Utils";
+import { hasSpecialCharacters, isNotNumber } from "../../ValidationUtils";
+import { serviceRadioButtonOptions } from "../../Constants"
 
 const ServiceForm = () => {
 

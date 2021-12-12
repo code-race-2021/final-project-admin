@@ -1,4 +1,4 @@
-import  { isNotAlphabet, hasSpecialCharacters, isNotNumber } from "../../Utils";
+import  { isNotAlphabet, hasSpecialCharacters, isNotNumber } from "../../ValidationUtils";
 import Form from "./Form";
 import FormInputField from "./FormInputField";
 

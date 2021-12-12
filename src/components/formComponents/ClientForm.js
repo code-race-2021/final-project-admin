@@ -1,6 +1,6 @@
 import Form from "./Form";
 import FormInputField from "./FormInputField";
-import { isNotAlphabet, isNotEmail , isNotDNI } from "../../Utils";
+import { isNotAlphabet, isNotEmail , isNotDNI } from "../../ValidationUtils";
 
 const ClientForm = () => {
   const clientFormData = (
