@@ -2,7 +2,7 @@ import { FormControl } from "@chakra-ui/react";
 import Form from "./Form";
 import InputField from "./InputField";
 import RadioButtons from "./RadioButtons";
-import { hasSpecialCharacters, isNumber } from "../../Utils";
+import { hasSpecialCharacters, isNumber, serviceRadioButtonOptions } from "../../Utils";
 
 const ServiceForm = () => {
 
@@ -19,7 +19,7 @@ const ServiceForm = () => {
       {/* SERVICE TYPE RADIO BUTTONS */}
       <RadioButtons
         label={"Tipo de servicio"}
-        options={["Garantía", "Devolución"]}
+        options={serviceRadioButtonOptions}
       />
       {/* VALIDITY DAYS INPUT */}
       <InputField

@@ -6,10 +6,9 @@ import {
   VStack,
   Link,
 } from "@chakra-ui/react";
+import  {formOptions}  from "../Utils";
 
 const Home = () => {
-    
-  const formOptions = [ "producto", "cliente", "vendedor", "servicio", "delivery" ];
 
   return (
     <Stack bg="teal" direction="row" p={20} justify="center" h="100vh">
