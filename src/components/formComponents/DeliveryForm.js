@@ -1,9 +1,8 @@
-import { FormControl } from "@chakra-ui/react";
-import  { hasSpecialCharacters } from "../../ValidationUtils";
-import { deliveryRadioButtonOptions } from "../../Constants"
-import Form from "./Form";
-import FormInputField from "./FormInputField";
-import FormRadioButtons from "./FormRadioButtons";
+import  { hasSpecialCharacters } from "../../utils/ValidationUtils";
+import { deliveryRadioButtonOptions } from "../../utils/Constants"
+import Form from "../formComponents/generics/Form";
+import FormInputField from "../formComponents/generics/FormInputField";
+import FormRadioButtons from "../formComponents/generics/FormRadioButtons";
 
 const DeliveryForm = () => {
 

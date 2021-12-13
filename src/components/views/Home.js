@@ -6,7 +6,7 @@ import {
   VStack,
   Link,
 } from "@chakra-ui/react";
-import  {formOptions}  from "../Constants";
+import  {formOptions}  from "../../utils/Constants";
 
 const Home = () => {
 

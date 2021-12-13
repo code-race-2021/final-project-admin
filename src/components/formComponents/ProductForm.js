@@ -1,6 +1,6 @@
-import  { isNotAlphabet, hasSpecialCharacters, isNotNumber } from "../../ValidationUtils";
-import Form from "./Form";
-import FormInputField from "./FormInputField";
+import  { isNotAlphabet, hasSpecialCharacters, isNotNumber } from "../../utils/ValidationUtils";
+import Form from "../formComponents/generics/Form";
+import FormInputField from "../formComponents/generics/FormInputField";
 
 const ProductForm = () => {
 

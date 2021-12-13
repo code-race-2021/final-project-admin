@@ -1,8 +1,8 @@
-import Form from "./Form";
-import FormInputField from "./FormInputField";
-import FormRadioButtons from "./FormRadioButtons";
-import { isNotAlphabet, isNotDNI } from "../../ValidationUtils";
-import { currencyRadioButtonOptions } from "../../Constants"
+import Form from "../formComponents/generics/Form";
+import FormInputField from "../formComponents/generics/FormInputField";
+import FormRadioButtons from "../formComponents/generics/FormRadioButtons";
+import { isNotAlphabet, isNotDNI } from "../../utils/ValidationUtils";
+import { currencyRadioButtonOptions } from "../../utils/Constants"
 
 const VendorForm = () => {
   const vendorFormData = (

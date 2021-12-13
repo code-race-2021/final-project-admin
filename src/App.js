@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/views/Home';
 import ProductForm from './components/formComponents/ProductForm';
-import ClientForm from './components/formComponents/ClientForm';
-import VendorForm from './components/formComponents/VendorForm';
+import ClientForm from './components/formComponents/CustomerForm';
+import VendorForm from './components/formComponents/SellerForm';
 import ServiceForm from './components/formComponents/ServiceForm';
 import DeliveryForm from './components/formComponents/DeliveryForm';
 
